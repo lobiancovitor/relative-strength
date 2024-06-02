@@ -1,10 +1,10 @@
 name: Output
 
 on:
-  push:
-    branches: [ main ]
-  # schedule:
-  #   - cron: "0 0 * * *"
+  # push:
+  #   branches: [ main ]
+  schedule:
+    - cron: "0 14 * * *"
 
 jobs:
       build:
