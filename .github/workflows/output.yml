@@ -37,9 +37,7 @@ jobs:
               add: "relative-strength/output/rs_stocks.csv"
 
           - name: Push changes
-            run: |
-              cd relative-strength
-              git push
+            run: git push
 
           - name: Upload rs_stocks.csv as an artifact
             uses: actions/upload-artifact@v2
