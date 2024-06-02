@@ -27,19 +27,19 @@ jobs:
           - name: Execute main.py script
             run: python main.py
 
-           - name: Add and commit
-             uses: EndBug/add-and-commit@v9
-             with:
+          - name: Add and commit
+            uses: EndBug/add-and-commit@v9
+            with:
               author_name: GitHub Actions
               author_email: 41898282+github-actions[bot]@users.noreply.github.com
               github_token: ${{ secrets.GITHUB_TOKEN }}
               message: "chore: Update file"
               add: "relative-strength/output/rs_stocks.csv"
 
-            - name: Push changes
-              run: |
-                cd relative-strength
-                git push
+          - name: Push changes
+            run: |
+              cd relative-strength
+              git push
 
           - name: Upload rs_stocks.csv as an artifact
             uses: actions/upload-artifact@v2
