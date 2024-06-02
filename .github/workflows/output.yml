@@ -27,6 +27,17 @@ jobs:
           - name: Execute main.py script
             run: python main.py
 
+          - name: List output directory contents
+            run: ls -la output
+
+          - name: Clone relative-strength repo
+            run: |
+              git clone https://github.com/lobiancovitor/relative-strength.git
+              cp output/rs_stocks.csv relative-strength/output/re_stocks.csv
+
+          - name: List relative-strength directory contents
+            run: ls -la relative-strength/output
+
           - name: Add and commit
             uses: EndBug/add-and-commit@v9
             with:
@@ -37,7 +48,9 @@ jobs:
               add: "relative-strength/output/rs_stocks.csv"
 
           - name: Push changes
-            run: git push
+            run: |
+              cd relative-strength
+              git push
 
           - name: Upload rs_stocks.csv as an artifact
             uses: actions/upload-artifact@v2
