@@ -14,6 +14,6 @@ def get_securities(data_url: str = DATA_URL) -> list:
     #     table.to_csv(f"collection_{index}.csv")
 
     # securities = collection[0]["Ticker"].values
-    securities = collection[0]["Ticker"][:11].values  # Usar em testes
+    securities = collection[0]["Ticker"][:20].values  # Usar em testes
 
     return list(securities)
