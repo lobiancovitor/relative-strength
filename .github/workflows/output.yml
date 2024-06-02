@@ -27,33 +27,18 @@ jobs:
           - name: Execute main.py script
             run: python main.py
 
-          - name: List output directory contents
-            run: ls -la output
-
-          - name: Clone relative-strength repo
+          - name: push to git
             run: |
-              git clone https://github.com/lobiancovitor/relative-strength.git
-              cp output/rs_stocks.csv relative-strength/output/re_stocks.csv
-
-          - name: List relative-strength directory contents
-            run: ls -la relative-strength/output
-
-          - name: Add and commit
-            uses: EndBug/add-and-commit@v9
-            with:
-              author_name: GitHub Actions
-              author_email: 41898282+github-actions[bot]@users.noreply.github.com
-              github_token: ${{ secrets.GITHUB_TOKEN }}
-              message: "chore: Update file"
-              add: "relative-strength/output/rs_stocks.csv"
-
-          - name: Push changes
-            run: |
+              git clone https://lobiancovitor:${{ secrets.GITHUB_TOKEN }}@github.com/lobiancovitor/relative-strength.git
+              rm ./relative-strength/output/* && cp -a ./output/. ./relative-strength/output
               cd relative-strength
-              git push
+              git config user.name "CI" && git config user.email "ci@github.com"
+              git add --all
+              git commit -m "CI output update" || echo "nothing to commit"
+              git push || echo "nothing to push"
 
           - name: Upload rs_stocks.csv as an artifact
             uses: actions/upload-artifact@v2
             with:
               name: rs_stocks.csv
-              path: output/rs_stocks.csv
+              path: output
