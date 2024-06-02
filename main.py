@@ -1,0 +1,39 @@
+import os
+from datetime import date, timedelta
+
+from load_data import get_securities
+from ranking import rankings
+from utils import write_to_file
+from yahoo_finance import get_yf_data
+
+today = date.today()
+start_date = today - timedelta(days=1 * 365 + 183)
+
+DIR = os.getcwd()
+DATA_DIR = os.path.join(DIR, "data")
+OUTPUT_DIR = os.path.join(DIR, "output")
+PRICE_DATA_FILE = os.path.join(DATA_DIR, "price_history.json")
+REFERENCE_TICKER = get_yf_data("^BVSP", start_date, today)
+REF_TICKER = {"ticker": REFERENCE_TICKER}
+
+os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
+def save_data(securities: list):
+    tickers_data = {
+        ticker: get_yf_data(ticker, start_date, today) for ticker in securities
+    }
+    write_to_file(tickers_data, PRICE_DATA_FILE)
+
+
+def main():
+    securities = get_securities()
+    save_data(securities)
+    df = rankings(PRICE_DATA_FILE, REF_TICKER)
+    df.to_csv(os.path.join(OUTPUT_DIR, "rs_stocks.csv"), index=False)
+    print("***\nYour 'rs_stocks.csv' is in the output folder.\n***")
+
+
+if __name__ == "__main__":
+    main()
