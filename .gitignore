@@ -128,9 +128,7 @@ dmypy.json
 .pyre/
 
 # Custom
-data/
 .vscode/
-output/
 tmp/
 build/
 dist/
