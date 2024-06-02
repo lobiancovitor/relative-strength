@@ -13,7 +13,7 @@ def get_securities(data_url: str = DATA_URL) -> list:
     # for index, table in enumerate(collection):
     #     table.to_csv(f"collection_{index}.csv")
 
-    # securities = collection[0]["Ticker"].values
-    securities = collection[0]["Ticker"][:20].values  # Usar em testes
+    securities = collection[0]["Ticker"].values
+    # securities = collection[0]["Ticker"][:20].values  # Usar em testes
 
     return list(securities)
