@@ -1,9 +1,9 @@
 import os
 from datetime import date, timedelta
 
-from load_data import get_securities
+from load_data import get_fundamentals, get_securities
 from ranking import rankings
-from utils import write_to_file
+from utils import merge_dataframes, write_to_file
 from yahoo_finance import get_yf_data
 
 today = date.today()
@@ -30,8 +30,17 @@ def save_data(securities: list):
 def main():
     securities = get_securities()
     save_data(securities)
-    df = rankings(PRICE_DATA_FILE, REF_TICKER)
-    df.to_csv(os.path.join(OUTPUT_DIR, "rs_stocks.csv"), index=False)
+    df1 = rankings(PRICE_DATA_FILE, REF_TICKER)
+    df2 = get_fundamentals()
+    df = merge_dataframes(df1, df2)
+
+    df.to_csv(
+        os.path.join(
+            OUTPUT_DIR,
+            "rs_stocks.csv",
+        ),
+        index=False,
+    )
     print("***\nYour 'rs_stocks.csv' is in the output folder.\n***")
 
 
