@@ -1,5 +1,5 @@
 # RS Rating
-IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (i.e. 0-99 Score)
+IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (i.e. 0-99 Score)  
 Based on Fred6725 work.
 
 
@@ -20,7 +20,7 @@ Then all stocks are ranked from largest to smallest and a percentile is assigned
 
 
 # Fundamental Rating
-Single assessment of a company's earnings and key fundamentals.
+Single assessment of a company's earnings and key fundamentals.  
 This rating measures quarterly earnings growth, gross margins and gross profits to assets.
   
 
