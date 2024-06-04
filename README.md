@@ -21,7 +21,9 @@ Then all stocks are ranked from largest to smallest and a percentile is assigned
 
 # Fundamental Rating
 Single assessment of a company's earnings and key fundamentals.  
-This rating measures quarterly earnings growth, gross margins and gross profits to assets.
+This rating measures quarterly earnings growth, gross margins and gross profitability.  
+
+[See: The other side of value: The gross profitability premium, Robert Novy-Marx](https://www.sciencedirect.com/science/article/abs/pii/S0304405X13000044)
   
 
 ## Considered Stocks
