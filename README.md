@@ -1,6 +1,5 @@
 # RS Rating
 IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (i.e. 0-99 Score)  
-Based on Fred6725 work.  
 
 [Relative Strength Rating Pinpoints A Stock's Power](https://finance.yahoo.com/news/relative-strength-rating-pinpoints-stocks-214500318.html)
 
@@ -9,7 +8,8 @@ https://github.com/lobiancovitor/relative-strength/blob/main/output/rs_stocks.cs
 
 
 ## Calculation
-Yearly performance of stock divided by IBOV performance during the same period.
+Yearly performance of stock divided by IBOV performance during the same period.  
+Based on Fred6725 work.  
 
 RS Score = 40% * P3 + 20% * P6 + 20% * P9 + 20% * P12
 
