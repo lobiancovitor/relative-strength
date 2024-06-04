@@ -23,6 +23,8 @@ Then all stocks are ranked from largest to smallest and a percentile is assigned
 Single assessment of a company's earnings and key fundamentals.  
 This rating measures quarterly earnings growth, gross margins and gross profitability.  
 
+[An explanation on earnings growth](https://finance.yahoo.com/news/eps-rating-fast-tracks-basic-221200776.html)  
+
 [The other side of value: The gross profitability premium, Robert Novy-Marx](https://www.sciencedirect.com/science/article/abs/pii/S0304405X13000044)
   
 
