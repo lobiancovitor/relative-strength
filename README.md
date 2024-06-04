@@ -1,9 +1,9 @@
 # RS Rating
 IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (i.e. 0-99 Score)
-Based on https://github.com/Fred6725/relative-strength/tree/main work
+Based on Fred6725 work.
 
 
-## Weekly Generated Outputs
+## Daily Generated Outputs
 Stocks: https://github.com/lobiancovitor/relative-strength/blob/main/output/rs_stocks.csv  
 
 
@@ -17,6 +17,11 @@ With P3 the performance of the 3 last month. (P3 = Close/Close[63], for 63 days 
 Formula: RS Score = (1 + RS Score for Stocks) / (1 + RS Score for IBOV)
 
 Then all stocks are ranked from largest to smallest and a percentile is assigned from 99 to 0.
+
+
+# Fundamental Rating
+Single assessment of a company's earnings and key fundamentals.
+This rating measures quarterly earnings growth, gross margins and gross profits to assets.
   
 
 ## Considered Stocks
