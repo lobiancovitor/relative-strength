@@ -1,7 +1,7 @@
 import pandas as pd
 
 DATA_URL = "https://www.dadosdemercado.com.br/bolsa/acoes"
-FPATH = "output/fundamentals.csv"
+FPATH = "data/fundamentals.csv"
 
 
 def get_securities(data_url: str = DATA_URL) -> list:
