@@ -1,7 +1,8 @@
 # RS Rating
 IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (i.e. 0-99 Score)  
-Based on Fred6725 work.
+Based on Fred6725 work.  
 
+[Relative Strength Rating Pinpoints A Stock's Power](https://finance.yahoo.com/news/relative-strength-rating-pinpoints-stocks-214500318.html)
 
 ## Daily Generated Outputs
 Stocks: https://github.com/lobiancovitor/relative-strength/blob/main/output/rs_stocks.csv  
