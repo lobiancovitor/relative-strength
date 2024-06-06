@@ -24,6 +24,6 @@ def merge_dataframes(df1, df2):
         axis=1,
     )
 
-    df["Fundamental Rating"].fillna("N/A", inplace=True)
+    df.dropna(inplace=True)
 
     return df
