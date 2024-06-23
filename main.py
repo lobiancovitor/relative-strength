@@ -6,6 +6,9 @@ from ranking import rankings
 from utils import merge_dataframes, write_to_file
 from yahoo_finance import get_yf_data
 
+from breadth.load_data import get_data
+from breadth.breadth import breadth
+
 today = date.today()
 start_date = today - timedelta(days=1 * 365 + 183)
 
@@ -13,7 +16,7 @@ DIR = os.getcwd()
 DATA_DIR = os.path.join(DIR, "data")
 OUTPUT_DIR = os.path.join(DIR, "output")
 PRICE_DATA_FILE = os.path.join(DATA_DIR, "price_history.json")
-REFERENCE_TICKER = get_yf_data("^BVSP", start_date, today)
+REFERENCE_TICKER = get_yf_data("^BVSP")
 REF_TICKER = {"ticker": REFERENCE_TICKER}
 
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -22,25 +25,27 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def save_data(securities: list):
     tickers_data = {
-        ticker: get_yf_data(ticker, start_date, today) for ticker in securities
+        ticker: get_yf_data(ticker) for ticker in securities
     }
     write_to_file(tickers_data, PRICE_DATA_FILE)
 
 
 def main():
     securities = get_securities()
-    save_data(securities)
-    df1 = rankings(PRICE_DATA_FILE, REF_TICKER)
-    df2 = get_fundamentals()
-    df = merge_dataframes(df1, df2)
+    # save_data(securities)
+    # df1 = rankings(PRICE_DATA_FILE, REF_TICKER)
+    # df2 = get_fundamentals()
+    # df = merge_dataframes(df1, df2)
 
-    df.to_csv(
-        os.path.join(
-            OUTPUT_DIR,
-            "rs_stocks.csv",
-        ),
-        index=False,
-    )
+    # df.to_csv(
+    #     os.path.join(
+    #         OUTPUT_DIR,
+    #         "rs_stocks.csv",
+    #     ),
+    #     index=False,
+    # )
+    data = get_data(securities)
+    breadth(data, len(securities))
     print("***\nYour 'rs_stocks.csv' is in the output folder.\n***")
 
 

@@ -13,6 +13,8 @@ def write_to_file(data: dict, file_path: str):
 
 
 def merge_dataframes(df1, df2):
+    df1['Ticker'] = df1['Ticker'].str.replace('.SA', '')
+    
     df = pd.merge(
         df1,
         df2,
