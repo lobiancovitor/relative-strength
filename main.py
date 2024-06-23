@@ -32,18 +32,18 @@ def save_data(securities: list):
 
 def main():
     securities = get_securities()
-    # save_data(securities)
-    # df1 = rankings(PRICE_DATA_FILE, REF_TICKER)
-    # df2 = get_fundamentals()
-    # df = merge_dataframes(df1, df2)
+    save_data(securities)
+    df1 = rankings(PRICE_DATA_FILE, REF_TICKER)
+    df2 = get_fundamentals()
+    df = merge_dataframes(df1, df2)
 
-    # df.to_csv(
-    #     os.path.join(
-    #         OUTPUT_DIR,
-    #         "rs_stocks.csv",
-    #     ),
-    #     index=False,
-    # )
+    df.to_csv(
+        os.path.join(
+            OUTPUT_DIR,
+            "rs_stocks.csv",
+        ),
+        index=False,
+    )
     data = get_data(securities)
     breadth(data, len(securities))
     print("***\nYour 'rs_stocks.csv' is in the output folder.\n***")
