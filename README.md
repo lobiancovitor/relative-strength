@@ -6,6 +6,8 @@ IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (
 ## Daily Generated Outputs
 https://github.com/lobiancovitor/relative-strength/blob/main/output/rs_stocks.csv  
 
+## [Market Breadth](https://github.com/lobiancovitor/relative-strength/blob/main/breadth/README.md)
+Market breadth attempts to find how much underlying strength or weakness there is in a given stock index. Decades of market history show three out of four stocks will follow the underlying trend, either up or down.
 
 ## Calculation
 Yearly performance of stock divided by IBOV performance during the same period.  
