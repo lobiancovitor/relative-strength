@@ -28,7 +28,7 @@ def strength(closes: pd.Series):
         quarters2 = quarters_perf(closes, 2)
         quarters3 = quarters_perf(closes, 3)
         quarters4 = quarters_perf(closes, 4)
-        return 0.4 * quarters1 + 0.2 * quarters2 + 0.2 * quarters3 + 0.2 * quarters4
+        return 0.4 * quarters1 + 0.3 * quarters2 + 0.2 * quarters3 + 0.1 * quarters4
     except Exception:
         return 0
 
