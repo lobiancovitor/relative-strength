@@ -1,12 +1,8 @@
-from datetime import date
-
 import yfinance as yf
 
 
-def get_yf_data(securities: list, period="5y") -> dict:
-    df = yf.download(
-        securities,
-    )
+def get_yf_data(securities: list) -> dict:
+    df = yf.download(securities, period="5y")
 
     candles = [
         {

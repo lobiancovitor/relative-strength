@@ -1,9 +1,9 @@
 import os
 from datetime import date, timedelta
 
-from load_data import get_fundamentals, get_securities
+from load_data import get_securities
 from ranking import rankings
-from utils import merge_dataframes, write_to_file
+from utils import write_to_file
 from yahoo_finance import get_yf_data
 
 from breadth.load_data import get_data
@@ -33,9 +33,7 @@ def save_data(securities: list):
 def main():
     securities = get_securities()
     save_data(securities)
-    df1 = rankings(PRICE_DATA_FILE, REF_TICKER)
-    df2 = get_fundamentals()
-    df = merge_dataframes(df1, df2)
+    df = rankings(PRICE_DATA_FILE, REF_TICKER)
 
     df.to_csv(
         os.path.join(
