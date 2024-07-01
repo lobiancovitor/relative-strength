@@ -23,6 +23,8 @@ def create_dataframe(PRICE_DATA_FILE: str, REF_TICKER: dict):
     
     df['Master Score'] = df['Master Score'].apply(map_master_score_to_grade)
     
+    df['Ticker'] = df['Ticker'].str.replace(r'\.SA$', '')
+    
     return df
 
 def calculate_master_score(row):
