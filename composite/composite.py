@@ -2,22 +2,26 @@ from fundamental.fundamental import get_fundamental_rating
 from acc_dist.acc_dist import calculate_stock_ad
 from strength.ranking import rankings
 import pandas as pd
+from .industry_group import get_industry_group
 
 RS_COLUMNS          = ["Ticker", "RS Rating"]
 FUNDAMENTAL_COLUMNS = ["Ticker","Fundamental Rating"]
 AD_COLUMNS          = ["Ticker","A/D Rating"]
+INDUSTRY_COLUMNS    = ["Ticker", "Industry Group"]
 
 def create_dataframe(PRICE_DATA_FILE: str, REF_TICKER: dict):
     relative_strength =  rankings(PRICE_DATA_FILE, REF_TICKER)[RS_COLUMNS]
     fundamentals = get_fundamental_rating()[FUNDAMENTAL_COLUMNS]
     acc_dist = calculate_stock_ad(PRICE_DATA_FILE)[AD_COLUMNS]
+    industry_group = get_industry_group()[INDUSTRY_COLUMNS]
     
     df = pd.merge(relative_strength, fundamentals, on='Ticker')
     df = pd.merge(df, acc_dist, on='Ticker')
+    df = pd.merge(df, industry_group, on='Ticker')
     
     df['Master Score'] = df.apply(calculate_master_score, axis=1)
     
-    df = df[["Ticker", "Master Score", "Fundamental Rating", "RS Rating", "A/D Rating"]]
+    df = df[["Ticker", "Master Score", "Fundamental Rating", "RS Rating", "A/D Rating", "Industry Group"]]
     
     df = df.sort_values(by='Master Score', ascending=False)
     
