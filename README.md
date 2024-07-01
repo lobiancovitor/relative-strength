@@ -4,7 +4,7 @@ IBD Style Relative Strength Percentile Ranking of Stocks for Brazilian Markets (
 [Relative Strength Rating Pinpoints A Stock's Power](https://finance.yahoo.com/news/relative-strength-rating-pinpoints-stocks-214500318.html)
 
 ## Daily Generated Outputs
-https://github.com/lobiancovitor/relative-strength/blob/main/output/rs_stocks.csv  
+https://github.com/lobiancovitor/relative-strength/blob/main/output/ratings.csv  
 
 ## [Market Breadth](https://github.com/lobiancovitor/relative-strength/blob/main/breadth/README.md)
 Market breadth attempts to find how much underlying strength or weakness there is in a given stock index. Decades of market history show three out of four stocks will follow the underlying trend, either up or down.
@@ -43,4 +43,4 @@ Tickers from https://www.dadosdemercado.com.br/bolsa/acoes
 
 ### \*\*\* Output \*\*\*
 
-- in the `output` folder you will find the list of ranked stocks: `rs_stocks.csv`
+- in the `output` folder you will find the list of ranked stocks: `ratings.csv`
