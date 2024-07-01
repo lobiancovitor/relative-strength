@@ -1,8 +1,8 @@
 name: Output
 
 on:
-  # push:
-  #   branches: [ main ]
+  push:
+    branches: [ main ]
   schedule:
     - cron: "0 3 * * *"
 
@@ -37,8 +37,14 @@ jobs:
               git commit -m "CI output update" || echo "nothing to commit"
               git push || echo "nothing to push"
 
-          - name: Upload rs_stocks.csv as an artifact
+          - name: Upload ratings.csv as an artifact
             uses: actions/upload-artifact@v2
             with:
-              name: rs_stocks.csv
+              name: ratings.csv
               path: output
+
+          - name: Upload price_history.json as an artifact
+            uses: actions/upload-artifact@v2
+            with:
+              name: price_history.json
+              path: data
