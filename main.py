@@ -2,12 +2,13 @@ import os
 from datetime import date, timedelta
 
 from load_data import get_securities
-from ranking import rankings
 from utils import write_to_file
 from yahoo_finance import get_yf_data
 
 from breadth.load_data import get_data
 from breadth.breadth import breadth
+
+from composite import composite as c
 
 today = date.today()
 start_date = today - timedelta(days=1 * 365 + 183)
@@ -33,18 +34,17 @@ def save_data(securities: list):
 def main():
     securities = get_securities()
     save_data(securities)
-    df = rankings(PRICE_DATA_FILE, REF_TICKER)
-
+    df = c.create_dataframe(PRICE_DATA_FILE, REF_TICKER)
     df.to_csv(
         os.path.join(
             OUTPUT_DIR,
-            "rs_stocks.csv",
+            "ratings.csv",
         ),
         index=False,
     )
     data = get_data(securities)
     breadth(data, len(securities))
-    print("***\nYour 'rs_stocks.csv' is in the output folder.\n***")
+    print("***\nYour 'ratings.csv' is in the output folder.\n***")
 
 
 if __name__ == "__main__":
