@@ -48,7 +48,7 @@ def plot_percent_above_ma(data, len):
     ax1.set_title("IBOV Percent of Stocks Above 200 Day Moving Average (EOD)")
     ax1.legend(loc="upper left")
 
-    plt.savefig("breadth/$BRA200R.png", bbox_inches="tight")
+    plt.savefig("market/$BRA200R.png", bbox_inches="tight")
 
 
 def plot_mc_clellan_summation_index(data):
@@ -98,7 +98,7 @@ def plot_mc_clellan_summation_index(data):
     ax1.set_title("IBOV McClellan Summation Index (Ratio Adjusted) (EOD)")
     ax1.legend(loc="upper left")
 
-    plt.savefig("breadth/$BRSI.png", bbox_inches="tight")
+    plt.savefig("market/$BRSI.png", bbox_inches="tight")
 
 
 def plot_cumulative_net_new_highs(data):
@@ -128,4 +128,4 @@ def plot_cumulative_net_new_highs(data):
     ax1.set_title("IBOV Cumulative New Highs-New Lows (EOD)")
     ax1.legend(loc="upper left")
 
-    plt.savefig("breadth/$BRHL.png", bbox_inches="tight")
+    plt.savefig("market/$BRHL.png", bbox_inches="tight")
