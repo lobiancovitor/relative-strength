@@ -29,16 +29,15 @@ jobs:
 
           - name: Clone screener-log repository
             run: |
-              git clone https://lobiancovitor:${{ secrets.GITHUB_TOKEN }}@github.com/lobiancovitor/screener-log.git
+              git clone https://lobiancovitor:${{ secrets.PAT }}@github.com/lobiancovitor/screener-log.git
 
           - name: Copy ratings.csv to screener-log repository
             run: |
               rm ./screener-log/output/* && cp -a ./output/. ./screener-log/output
-
+              
           - name: push to git
             run: |
-              git clone https://lobiancovitor:${{ secrets.GITHUB_TOKEN }}@github.com/lobiancovitor/relative-strength.git
-              rm ./relative-strength/output/* && cp -a ./output/. ./relative-strength/output
+              
               cd screener-log
               git config user.name "CI" && git config user.email "ci@github.com"
               git add --all
