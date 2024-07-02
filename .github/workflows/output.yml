@@ -45,14 +45,14 @@ jobs:
               git commit -m "CI output update" || echo "nothing to commit"
               git push || echo "nothing to push"
 
-          - name: Upload ratings.csv as an artifact
-            uses: actions/upload-artifact@v2
-            with:
-              name: ratings.csv
-              path: output
+          # - name: Upload ratings.csv as an artifact
+          #   uses: actions/upload-artifact@v2
+          #   with:
+          #     name: ratings.csv
+          #     path: output
 
-          - name: Upload price_history.json as an artifact
-            uses: actions/upload-artifact@v2
-            with:
-              name: price_history.json
-              path: data
+          # - name: Upload price_history.json as an artifact
+          #   uses: actions/upload-artifact@v2
+          #   with:
+          #     name: price_history.json
+          #     path: data
