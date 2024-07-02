@@ -31,6 +31,7 @@ jobs:
             run: |
               git clone https://lobiancovitor:${{ secrets.GITHUB_TOKEN }}@github.com/lobiancovitor/relative-strength.git
               rm ./relative-strength/output/* && cp -a ./output/. ./relative-strength/output
+              rm ./relative-strength/market/* && cp -a ./output/. ./relative-strength/market
               cd relative-strength
               git config user.name "CI" && git config user.email "ci@github.com"
               git add --all
@@ -42,9 +43,27 @@ jobs:
             with:
               name: ratings.csv
               path: output
-
+          
           - name: Upload price_history.json as an artifact
             uses: actions/upload-artifact@v2
             with:
               name: price_history.json
-              path: data
+              path: output
+
+          - name: Upload $BRA200R.png as an artifact
+            uses: actions/upload-artifact@v2
+            with:
+              name: $BRA200R.png
+              path: market
+
+          - name: Upload $BRHL.png as an artifact
+            uses: actions/upload-artifact@v2
+            with:
+              name: $BRHL.png
+              path: market
+
+          - name: Upload $BRSI.png as an artifact
+            uses: actions/upload-artifact@v2
+            with:
+              name: $BRSI.png
+              path: market

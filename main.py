@@ -16,7 +16,7 @@ start_date = today - timedelta(days=1 * 365 + 183)
 DIR = os.getcwd()
 DATA_DIR = os.path.join(DIR, "data")
 OUTPUT_DIR = os.path.join(DIR, "output")
-PRICE_DATA_FILE = os.path.join(DATA_DIR, "price_history.json")
+PRICE_DATA_FILE = os.path.join(OUTPUT_DIR, "price_history.json")
 REFERENCE_TICKER = get_yf_data("^BVSP")
 REF_TICKER = {"ticker": REFERENCE_TICKER}
 
