@@ -31,7 +31,6 @@ jobs:
             run: |
               git clone https://lobiancovitor:${{ secrets.GITHUB_TOKEN }}@github.com/lobiancovitor/relative-strength.git
               rm ./relative-strength/output/* && cp -a ./output/. ./relative-strength/output
-              rm ./relative-strength/market/* && cp -a ./output/. ./relative-strength/market
               cd relative-strength
               git config user.name "CI" && git config user.email "ci@github.com"
               git add --all
@@ -49,6 +48,16 @@ jobs:
             with:
               name: price_history.json
               path: output
+
+          - name: push to git
+            run: |
+              git clone https://lobiancovitor:${{ secrets.GITHUB_TOKEN }}@github.com/lobiancovitor/relative-strength.git
+              rm ./relative-strength/market/* && cp -a ./market/. ./relative-strength/market
+              cd relative-strength
+              git config user.name "CI" && git config user.email "ci@github.com"
+              git add --all
+              git commit -m "CI output update" || echo "nothing to commit"
+              git push || echo "nothing to push"
 
           - name: Upload $BRA200R.png as an artifact
             uses: actions/upload-artifact@v2
