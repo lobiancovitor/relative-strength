@@ -186,50 +186,50 @@ PLAS3,D,D,7,A,Automóveis e motocicletas
 MBLY3,D,D,25,A,Programas e serviços
 DOHL4,D,C,22,C,Tecidos vestuário e calçados
 BPAN4,D,C,44,C,Intermediários financeiros
-JSLG3,D,C+,43,D,Transporte
 SCAR3,D,C,45,C,Exploração de imóveis
-SRNA3,D,C,39,C,Energia elétrica
-BEEF3,D,B,38,E,Alimentos processados
-NEOE3,D,B,50,E,Energia elétrica
 BRSR6,D,C,38,C,Intermediários financeiros
-EVEN3,D,C,36,C,Construção civil
-AFLT3,D,D,45,A,Energia elétrica
 TUPY3,D,C+,37,D,Material de transporte
 VLID3,D,B,37,E,Serviços diversos
-ALPA4,D,D,68,C,Tecidos vestuário e calçados
-VALE3,D,C,60,E,Mineração
+SRNA3,D,C,39,C,Energia elétrica
+BEEF3,D,B,38,E,Alimentos processados
+JSLG3,D,C+,43,D,Transporte
+AFLT3,D,D,45,A,Energia elétrica
+EVEN3,D,C,36,C,Construção civil
+NEOE3,D,B,50,E,Energia elétrica
 AURE3,D,D,59,C,Energia elétrica
-SOMA3,D,C,21,D,Comércio
-PTNT4,D,C,21,D,Tecidos vestuário e calçados
+VALE3,D,C,60,E,Mineração
+ALPA4,D,D,68,C,Tecidos vestuário e calçados
 MELK3,D,C,18,D,Construção civil
+PTNT4,D,C,21,D,Tecidos vestuário e calçados
+SOMA3,D,C,21,D,Comércio
 EZTC3,D,C,16,D,Construção civil
+LOGN3,D,C,48,D,Transporte
 AMBP3,D,C,46,D,Água e saneamento
-ECOR3,D,C+,40,E,Transporte
 BAHI3,D,C,16,D,Diversos
 SEER3,D,C+,15,E,Diversos
 ONCO3,D,C+,8,E,Serviços médico-hospitalares análises e diagnósticos
 MGLU3,D,C+,6,E,Comércio
 SHOW3,D,C,6,D,Viagens e lazer
 YDUQ3,D,C+,5,E,Diversos
-LOGN3,D,C,48,D,Transporte
+ALOS3,D,C,44,D,Exploração de imóveis
 VVEO3,D,C+,0,E,Comércio e distribuição
 NEXP3,D,C+,30,E,Exploração de imóveis
-DXCO3,D,C,32,D,Madeira e papel
 ZAMP3,D,C+,35,E,Hotéis e restaurantes
+DXCO3,D,C,32,D,Madeira e papel
 PETZ3,D,C+,30,E,Comércio
+ECOR3,D,C+,40,E,Transporte
 ABCB4,D,D,61,D,Intermediários financeiros
-MEAL3,D,D,10,C,Hotéis e restaurantes
-LVTC3,D,D+,29,D,Programas e serviços
+SIMH3,D,C,10,E,Holdings diversificadas
 TASA4,D,C,33,E,Máquinas e equipamentos
 BRKM5,D,D,16,C,Químicos
 RENT3,D,C,15,E,Diversos
 BLAU3,D,C,13,E,Comércio e distribuição
 LJQQ3,D,C,11,E,Comércio
 CVCB3,D,C,10,E,Viagens e lazer
-MTRE3,D,C,8,E,Construção civil
-SIMH3,D,C,10,E,Holdings diversificadas
-PDTC3,D,C,18,E,Programas e serviços
+MEAL3,D,D,10,C,Hotéis e restaurantes
 MATD3,D,C,8,E,Serviços médico-hospitalares análises e diagnósticos
+MTRE3,D,C,8,E,Construção civil
+BBDC4,D,C,29,E,Intermediários financeiros
 MOVI3,D,C,7,E,Diversos
 EPAR3,D,C,6,E,Comércio
 DOTZ3,D,C,35,E,Diversos
@@ -237,72 +237,72 @@ QUAL3,D,C,5,E,Serviços médico-hospitalares análises e diagnósticos
 BHIA3,D,C,3,E,Comércio
 GOLL4,D,C,2,E,Transporte
 CCRO3,D,C,34,E,Transporte
-BBDC4,D,C,29,E,Intermediários financeiros
+LVTC3,D,D+,29,D,Programas e serviços
 MYPK3,D,D,40,C,Automóveis e motocicletas
-CYRE3,D,C,33,E,Construção civil
-ATOM3,D,D,40,C,Outros
-ARML3,D,C,18,E,Máquinas e equipamentos
-CASH3,D,E,41,C,Programas e serviços
-ASAI3,D,C,19,E,Comércio e distribuição
-CRFB3,D,C,23,E,Comércio e distribuição
-AVLL3,D,D,19,C,Construção civil
-ALOS3,D,C,44,E,Exploração de imóveis
-OIBR3,D,E,38,C,Telecomunicações
 OFSA3,D,C,22,E,Medicamentos e outros produtos
+AVLL3,D,D,19,C,Construção civil
+ATOM3,D,D,40,C,Outros
+CASH3,D,E,41,C,Programas e serviços
+CRFB3,D,C,23,E,Comércio e distribuição
 ANIM3,D,C,23,E,Diversos
+OIBR3,D,E,38,C,Telecomunicações
+CYRE3,D,C,33,E,Construção civil
+ASAI3,D,C,19,E,Comércio e distribuição
+PDTC3,D,C,18,E,Programas e serviços
+ARML3,D,C,18,E,Máquinas e equipamentos
 AZEV4,D,E,67,E,Construção e engenharia
+TELB4,E,E,19,D,Telecomunicações
+ELET3,E,D,48,D,Energia elétrica
 JHSF3,E,D,26,D,Construção civil
 WEST3,E,E,8,D,Programas e serviços
-TRAD3,E,E,4,D,Programas e serviços
 PGMN3,E,D,31,D,Comércio e distribuição
 HBRE3,E,D,42,D,Exploração de imóveis
+TRAD3,E,E,4,D,Programas e serviços
 AMER3,E,E,5,D,Comércio
 INEP3,E,E,3,D,Máquinas e equipamentos
+RAIL3,E,D+,46,E,Transporte
 PDGR3,E,E,1,D,Construção civil
+BSLI3,E,D,28,D,Intermediários financeiros
 ATMP3,E,E,21,D,Serviços diversos
 HAPV3,E,E,45,D,Serviços médico-hospitalares análises e diagnósticos
 MRVE3,E,D,14,D,Construção civil
-BMKS3,E,E,48,D,Viagens e lazer
-TEND3,E,D,37,D,Construção civil
-BSLI3,E,D,28,D,Intermediários financeiros
-RAIL3,E,D+,46,E,Transporte
-TELB4,E,E,19,D,Telecomunicações
 MLAS3,E,E,20,D,Computadores e equipamentos
-ELET3,E,D,48,D,Energia elétrica
-RNEW4,E,D,14,D,Energia elétrica
+BMKS3,E,E,48,D,Viagens e lazer
 NGRD3,E,D+,14,E,Programas e serviços
-CTSA4,E,D,3,E,Tecidos vestuário e calçados
-GFSA3,E,E,4,E,Construção civil
-AZUL4,E,D,4,E,Transporte
-LAND3,E,D,29,E,Agropecuária
-SEQL3,E,D,3,E,Serviços diversos
-ALPK3,E,D,12,E,Serviços diversos
+RNEW4,E,D,14,D,Energia elétrica
+TEND3,E,D,37,D,Construção civil
+PCAR3,E,D,11,E,Comércio e distribuição
 CTNM4,E,D,2,E,Tecidos vestuário e calçados
+AZUL4,E,D,4,E,Transporte
+SEQL3,E,D,3,E,Serviços diversos
+CTSA4,E,D,3,E,Tecidos vestuário e calçados
+LUPA3,E,D,14,E,Petróleo gás e biocombustíveis
 DASA3,E,D,2,E,Serviços médico-hospitalares análises e diagnósticos
-AMAR3,E,D,5,E,Comércio
+FHER3,E,E,4,E,Químicos
 AGXY3,E,E,2,E,Agropecuária
+KRSA3,E,D,20,E,Serviços médico-hospitalares análises e diagnósticos
 AERI3,E,D,1,E,Máquinas e equipamentos
 SGPS3,E,E,1,E,Tecidos vestuário e calçados
 IFCM3,E,E,0,E,Programas e serviços
 JFEN3,E,E,0,E,Construção civil
-FHER3,E,E,4,E,Químicos
-LUPA3,E,D,14,E,Petróleo gás e biocombustíveis
-KRSA3,E,D,20,E,Serviços médico-hospitalares análises e diagnósticos
-CRPG5,E,D,28,E,Químicos
-RDNI3,E,E,11,E,Construção civil
-PCAR3,E,D,11,E,Comércio e distribuição
-CSAN3,E,D,25,E,Petróleo gás e biocombustíveis
-VIVR3,E,E,13,E,Construção civil
+GFSA3,E,E,4,E,Construção civil
+IRBR3,E,D,20,E,Previdência e seguros
+AMAR3,E,D,5,E,Comércio
+TCSA3,E,E,7,E,Construção civil
+MAPT4,E,E,31,E,Outros
 HBOR3,E,D,9,E,Construção civil
 COGN3,E,D,9,E,Diversos
 LWSA3,E,D,9,E,Programas e serviços
-BRAP4,E,D,35,E,Mineração
-IRBR3,E,D,20,E,Previdência e seguros
-TCSA3,E,E,7,E,Construção civil
 RAIZ4,E,D,26,E,Agropecuária
+CRPG5,E,D,28,E,Químicos
+BRAP4,E,D,35,E,Mineração
+LAND3,E,D,29,E,Agropecuária
+RDNI3,E,E,11,E,Construção civil
 LIGT3,E,D,22,E,Energia elétrica
+ALPK3,E,D,12,E,Serviços diversos
+CSAN3,E,D,25,E,Petróleo gás e biocombustíveis
 FESA4,E,D,23,E,Siderurgia e metalurgia
 PMAM3,E,E,6,E,Siderurgia e metalurgia
 OSXB3,E,E,42,E,Petróleo gás e biocombustíveis
-MAPT4,E,E,31,E,Outros
+VIVR3,E,E,13,E,Construção civil
 CSNA3,E,D,43,E,Siderurgia e metalurgia
